@@ -1,0 +1,85 @@
+.shrine {
+    background-image: url('/static/imgs/shrine-bg-img.jpg');
+    width: 100%;
+    height: 100%;
+    min-height: 94vh;
+    padding-bottom: 4%;
+}
+
+.shrine-wrapper {
+    display: flex;
+    width: 90%;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 12%;
+    gap: 2%;
+}
+
+.shrine-perk-wrap {
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.perk-image-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.shrine-perk {
+    width: 100%;
+    height: 100%;
+}
+
+.shrine-perk:hover {
+    cursor: pointer;
+}
+
+.perk-text {
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .shrine-wrapper {
+        padding-top: 14%;
+    }
+
+    .shrine-perk-wrap {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shrine {
+        height: 100%;
+    }
+
+    .shrine-wrapper {
+        flex-wrap: wrap;
+        padding-top: 14%;
+    }
+
+    .shrine-perk-wrap {
+        width: 40%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .shrine {
+        height: 100%;
+    }
+
+    .shrine-wrapper {
+        flex-wrap: wrap;
+        padding-top: 14%;
+    }
+
+    .shrine-perk-wrap {
+        width: 45%;
+        height: auto;
+    }
+}

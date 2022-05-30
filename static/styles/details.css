@@ -1,0 +1,98 @@
+main {
+    background-color: black;
+}
+
+.details {
+    width: 100%;
+    padding-top: 6%;
+}
+
+.name {
+    text-align: center;
+    margin: 4px;
+    font-size: 2rem;
+    color: #fcfcfc;
+    text-transform: uppercase;
+    text-shadow:1px 1px 1px #fff, 1px 1px 1px #ccc;
+    margin: 0 auto;
+}
+
+.details-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2%;
+}
+
+.image-credentials-wrap {
+    display: flex;
+}
+
+.image-wrapper {
+    width: 50%;
+    height: auto;
+}
+
+.image {
+    width: 100%;
+}
+
+.overview-wrapper {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.overview {
+    width: 100%;
+    font-size: 1.3rem;
+    color: #fcfcfc;
+    margin-top: 2%;
+    line-height: 1.3;
+}
+
+.info {
+    margin-left: 2%;
+    margin-top: 2%;
+    color: #fcfcfc;
+    font-size: 1.4rem;
+}
+
+.info p {
+    margin-top: 6px;
+}
+
+.right-side {
+    width: 50%;
+    height: auto;
+}
+
+.left-side {
+    width: 50%;
+    height: auto;
+}
+
+.lore-wrapper {
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.lore {
+    color: #fcfcfc;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.perks {
+    margin-top: 6%;
+    display: flex;
+}
+
+.perk-wrapper {
+    text-align: center;
+}
+
+.perk-name {
+    color: #fcfcfc;
+    font-size: 1.2rem;
+}

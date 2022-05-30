@@ -1,0 +1,100 @@
+{% extends 'shared/base.html' %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block content %}
+{% if killer %}
+<section class="details">
+    <h2 class="name">{{ killer.name }}</h2>
+    <article class="details-wrapper">
+        <article class="left-side">
+            <article class="image-credentials-wrap">
+                <article class="image-wrapper">
+                    <img class="image" src="{{ killer.icon.preview_portrait }}" alt="image">
+                </article>
+                <article class="info">
+                    <p class="info-name">Full Name: {{ killer.full_name }}</p>
+                    <p class="info-gender">Gender: {{ killer.gender }}</p>
+                    <p class="info-nationality">Nationality: {{ killer.nationality }}</p>
+                    <p class="info-realm">Realm: {{ killer.realm }}</p>
+                    <p class="info-power">Power: {{ killer.power }}</p>
+                    <p class="info-weapon">Weapon: {{ killer.weapon }}</p>
+                    <p class="info-speed">Speed: {{ killer.speed }}</p>
+                    <p class="info-terror-radius">Terror Radius: {{ killer.terror_radius }}</p>
+                    <p class="info-height">Height: {{ killer.height }}</p>
+                    <p class="info-difficulty">Difficulty: {{ killer.difficulty }}</p>
+                    <p class="info-dlc">DLC: {{ killer.dlc }}</p>
+                </article>
+            </article>
+            <article class="overview-wrapper">
+                <p class="overview">
+                    {{ killer.overview }}
+                </p>
+                <article class="perks">
+                    {% for perk in perks %}
+                    <article class="perk-wrapper">
+                        <h2 class="perk-name">{{ perk.perk_name }}</h2>
+                        <img class="perk-img" src="{{ perk.icon }}" alt="perk-img">
+                    </article>
+                    {% endfor %}
+                </article>
+            </article>
+        </article>
+        <article class="right-side"
+            style="background-image: url('{{ killer.icon.shop_background }}'); background-repeat: no-repeat; height: auto">
+            <article class="lore-wrapper">
+                <p class="lore">
+                    {{ killer.lore }}
+                </p>
+            </article>
+        </article>
+    </article>
+</section>
+{% endif %}
+{% if survivor %}
+<section class="details">
+    <h2 class="name">{{ survivor.name }}</h2>
+    <article class="details-wrapper">
+        <article class="left-side">
+            <article class="image-credentials-wrap">
+                <article class="image-wrapper">
+                    <img class="image" src="{{ survivor.icon.preview_portrait }}" alt="image">
+                </article>
+                <article class="info">
+                    <p class="info-name">Full Name: {{ survivor.full_name }}</p>
+                    <p class="info-gender">Gender: {{ survivor.gender }}</p>
+                    <p class="info-nationality">Nationality: {{ survivor.nationality }}</p>
+                    <p class="info-realm">Role: {{ survivor.role }}</p>
+                    <p class="info-difficulty">Difficulty: {{ survivor.difficulty }}</p>
+                    <p class="info-dlc">DLC: {{ survivor.dlc }}</p>
+                </article>
+            </article>
+            <article class="overview-wrapper">
+                <p class="overview">
+                    {{ survivor.overview }}
+                </p>
+                <article class="perks">
+                    {% for perk in perks %}
+                    <article class="perk-wrapper">
+                        <h2 class="perk-name">{{ perk.perk_name }}</h2>
+                        <img class="perk-img" src="{{ perk.icon }}" alt="perk-img">
+                    </article>
+                    {% endfor %}
+                </article>
+            </article>
+        </article>
+        <article class="right-side"
+            style="background-image: url('{{ survivor.icon.shop_background }}'); background-repeat: no-repeat; height: auto">
+            <article class="lore-wrapper">
+                <p class="lore">
+                    {{ survivor.lore }}
+                </p>
+            </article>
+        </article>
+    </article>
+</section>
+{% endif %}
+</main>
+{% endblock %}

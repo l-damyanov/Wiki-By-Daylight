@@ -1,0 +1,39 @@
+.header {
+    background-color: rgb(35, 40, 46, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.header .navigation ul {
+    display: flex;
+}
+
+.header .navigation ul li {
+    padding: 10px 40px;
+}
+
+.home-a {
+    color: #fcfcfc;
+    font-size: 1.8rem;
+    text-decoration: none;
+    margin-left: 2%;
+    text-shadow:1px 1px 10px #fcfcfc, 1px 1px 1px #fcfcfc;
+}
+
+.header .navigation ul li a {
+    color: #e69139;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: 0.3s;
+    text-shadow:1px 1px 10px #e69139, 1px 1px 1px #e69139;
+}
+
+.header .navigation ul li a:hover {
+    color: #f9ffc1;
+}

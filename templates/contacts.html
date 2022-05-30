@@ -1,0 +1,24 @@
+{% extends 'shared/base.html' %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block content %}
+<section class="contacts">
+    <article class="contacts-wrapper">
+        <h2 class="contacts-title">Contacts</h2>
+        <p class="contacts-text">This is my first project using Flask. It needs to be optimised in terms of
+            performance as well as to be uploaded on Heroku or some other cloud service.
+            My social medias are below!
+        </p>
+        <ul class="contacts-list">
+            <li class="contacts-list-item"><i class="fab fa-github"></i><a href="https://github.com/l-damyanov"
+                    target=”_blank”>GitHub: l-damyanov</a></li>
+            <li class="contacts-list-item"><p>These are the API's used to create this project.</p></li>
+            <li class="contacts-list-item"><a href="https://dbd.onteh.net.au/apidocs/" target=”_blank”>Dead By Daylight Onteh API</a></li>
+            <li class="contacts-list-item"><a href="https://dearvoodoo.github.io/DBD-API/" target=”_blank”>Dead By Daylight Dearvoodoo API</a></li>
+        </ul>
+    </article>
+</section>
+{% endblock %}

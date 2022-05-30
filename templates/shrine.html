@@ -1,0 +1,20 @@
+{% extends 'shared/base.html' %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block content %}
+<section class="shrine">
+    <article class="shrine-wrapper">
+        {% for shrine_perk in shrine_perks %}
+        <article class="shrine-perk-wrap">
+            <article class="perk-image-wrapper">
+                <img class="shrine-perk" src="{{ shrine_perk.icon }}" alt="perk-image">
+            </article>
+            <p class="perk-text">{{ shrine_perk.description }}</p>
+        </article>
+        {% endfor %}
+    </article>
+</section>
+{% endblock %}

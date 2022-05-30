@@ -1,0 +1,51 @@
+{% extends 'shared/base.html' %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block content %}
+<section id="hero">
+    <h1 class="main-title">
+        Wiki By Daylight
+    </h1>
+    <p class="under-title">The best wiki for the multiplayer horror game - Dead By Daylight! You can find information
+        about all killers and survivors up to date!</p>
+    <div class="buttons-section">
+        <button class="btn"><a href="/home_page#survivors">Survivors</a></button>
+        <button class="btn"><a href="/home_page#killers">Killers</a></button>
+    </div>
+</section>
+<div class="divider"></div>
+<section id="killers">
+    <h2 class="section-title">Killers</h2>
+    <div class="container">
+        {% for killer in killers %}
+        <div class="killer-card">
+            <h3 class="killer-name">{{ killer.name }}</h3>
+            <img src="{{ killer.icon.preview_portrait }}" class="killer-img" alt="killer-img">
+            <p class="killer-short-description"></p>
+            <a class="button-wrap" href="/details/killer/{{ killer.name_tag }}"><button
+                    class="details-btn" onclick="loading()">Details</button></a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<div class="divider"></div>
+<section id="survivors">
+    <h2 class="section-title">Survivors</h2>
+    <div class="container">
+        {% for survivor in survivors %}
+        <div class="killer-card">
+            <h3 class="killer-name">{{ survivor.name }}</h3>
+            <img src="{{ survivor.icon.preview_portrait }}" class="killer-img" alt="killer-img">
+            <p class="killer-short-description"></p>
+            <a class="button-wrap" href="/details/survivor/{{ survivor.name_tag }}"><button
+                    class="details-btn" onclick="loading()">Details</button></a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<div class="divider"></div>
+<section id="contacts"></section>
+{% endblock %}

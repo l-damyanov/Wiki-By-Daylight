@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/responsive.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <header class="header">
+        <a class="home-a" href="/" onclick="loading()">Wiki By Daylight</a>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/home_page" onclick="loading()">Characters</a></li>
+                <!-- <li><a href="/home_page" onclick="loading()">Killers</a></li> -->
+                <li><a href="/shrine" onclick="loading()">Shrine</a></li>
+                <li><a href="/contacts" onclick="loading()">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="loader"></div>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <p class="footer-text">Copyright © 2022 WikiByDaylight. All Rights Reserved. WikiByDaylight</p>
+    </footer>
+</body>
+
+<script type="text/javascript">
+    function loading() {
+        let element = document.getElementsByClassName('loader')[0];
+        element.style.display = 'block';
+    }
+</script>
+
+</html>
